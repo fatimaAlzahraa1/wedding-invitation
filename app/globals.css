@@ -107,6 +107,11 @@ p {
   height: 100vh;
   padding: 0;
   margin: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .envelope {
@@ -2437,6 +2442,41 @@ footer {
 .couple-video-text .ampersand {
   color: #c9a96e;
 }
+.click-here {
+  position: absolute;
+  top: auto;
+  bottom: 12%;
+  left: 35%;
+  transform: translateX(-50%);
+  z-index: 20;
+
+  color: #f4eee7;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-align: center;
+  white-space: nowrap;
+
+  text-shadow: 0 1px 5px rgba(46, 0, 3, 0.7);
+  animation: clickPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes clickPulse {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+.video-cover {
+  position: relative;
+}
+
 /* ===== ONE CONTINUOUS INVITATION ===== */
 
 /*.section {

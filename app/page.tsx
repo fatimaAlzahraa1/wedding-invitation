@@ -159,9 +159,12 @@ const [roseIndex, setRoseIndex] = useState(46);
   muted
   playsInline
   preload="auto"
-  onClick={(e) => {
-    e.currentTarget.play();
-  }}
+ onClick={(e) => {
+  const video = e.currentTarget;
+  if (video.paused) {
+    video.play().catch(() => {});
+  }
+}}
   onEnded={() => {
     setEnvelopeOpened(true);
 
@@ -173,6 +176,8 @@ const [roseIndex, setRoseIndex] = useState(46);
     setMusic(true);
   }}
 />
+  <p className="click-here">CLICK HERE</p>
+
 </div>.
 <div className="cover-inner">
   <div
